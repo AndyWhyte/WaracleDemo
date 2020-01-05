@@ -21,6 +21,7 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "@babel/preset-typescript": "^7.7.7",
     "busboy": "^0.3.1",
     "ejs": "^3.0.1",
     "ejs-cli": "^2.1.1",

@@ -182,9 +182,6 @@ function ViewBack(doc)
 {
 	doc.getElementById("viewPage").style.visibility = "hidden";
 	doc.getElementById("homePage").style.visibility = "visible";
-
-	let img = new Image();
-	doc.getElementById("viewCakeImage").src = img;
 }
 
 function Submit(doc)
