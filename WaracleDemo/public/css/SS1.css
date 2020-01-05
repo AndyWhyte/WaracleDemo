@@ -333,9 +333,9 @@
 {
 	margin:0px;
 	padding:0px;
-	/*border:none;*/
-	width:264px;
-	height:180px;
+	border:inset;
+	width:270px;
+	height:185px;
 	position:absolute;
 }
 

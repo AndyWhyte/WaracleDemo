@@ -60,7 +60,7 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 	el = doc.getElementById("homeCakeName");
 	el.style.width = imageWidth + "px";
 	el.style.left = imageWidth + "px";
-	el.style.top = (imageHeight + 8) + "px";
+	el.style.top = (imageHeight + 10) + "px";
 	el.value = gaNames[currIndex];
 
 	el = doc.getElementById("homeButtonL");
@@ -148,8 +148,8 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 function InitViewDiv(doc, imageWidth, imageHeight)
 {
 	let el = doc.getElementById("viewCakeName");
-	el.style.left = ((imageWidth / 4) + 170) + "px";
-	el.style.top = 0 + "px";
+	el.style.left = ((imageWidth / 4) + 165) + "px";
+	el.style.top = 195 + "px";
 
 	el = doc.getElementById("viewYumFactorLabel");
 	el.style.left = ((imageWidth / 4) + 440) + "px";
@@ -168,8 +168,8 @@ function InitViewDiv(doc, imageWidth, imageHeight)
 	el.style.top = 40 + "px";
 
 	el = doc.getElementById("viewCakeImage");
-	el.style.left = ((imageWidth / 4) + 145) + "px";
-	el.style.top = 33 + "px";
+	el.style.left = ((imageWidth / 4) + 140) + "px";
+	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewBackButton");
 	el.style.left = (((imageWidth * 3) / 2) - 35) + "px";
@@ -311,9 +311,6 @@ function View(doc)
 {
 	doc.getElementById("homePage").style.visibility = "hidden";
 
-	let el = doc.getElementById("viewPage");
-	el.style.visibility = "visible";
-
 	$.ajax(
 	{
 		type:"GET",
@@ -322,9 +319,11 @@ function View(doc)
 		dataType:"html",
 		success:function(result)
 		{
+			let el = doc.getElementById("viewPage");
 			$(el).html(result);
 
 			InitViewDiv(doc, IMAGE_WIDTH, IMAGE_HEIGHT);
+			el.style.visibility = "visible";
 
 			console.log("View success");
 		},
