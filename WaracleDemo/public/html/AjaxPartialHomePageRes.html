@@ -1,0 +1,21 @@
+﻿<div id="homeCentre" class="centre">
+	<div id="homeWrapper" class="homeWrapper">
+		<ul id="homeCarousel_ul" class="homeCarousel_ul">
+			<% for(let i=0; i < numItems; i++) { %>
+				<li class="homeCarousel_li"><img class="carousel_img" src="data:image/jpeg;charset=utf-8;base64,<%= aItemImages[i] %>" width="<%= imageWidth %>" height="<%= imageHeight %>" /></li>
+			<% } %>
+		</ul>
+	</div>
+	<button id="homeButtonL" class="homeButtonLR" type="button" onclick="ScrollLeft(document, <%= imageWidth %>, <%= numItems %>)"> < </button>
+	<button id="homeButtonR" class="homeButtonLR" type="button" onclick="ScrollRight(document, <%= imageWidth %>, <%= numItems %>)"> > </button>
+	<input id="homeMofN" class="homeMofN" type="text" readonly="readonly" value="1 / <%= numItems %>"/>
+	<div id="homeSemitransL" class="semitrans"></div>
+	<div id="homeSemitransR" class="semitrans"></div>
+	<input id="homeCakeName" class="homeCakeName" type="text" readonly="readonly" value=""/>
+	<button id="homeSubmitButton" class="homeSubmitButton" type="button" onclick="Submit(document)">Add</button>
+	<button id="homeViewButton" class="homeViewButton" type="button" onclick="View(document)">View</button>
+	<button id="homeDeleteButton" class="homeDeleteButton" type="button" onclick="DeleteItem(document)">Delete</button>
+	<input id="homeHiddenNumItems" type="hidden" readonly="readonly" value="<%= numItems %>"/>
+	<input id="homeHiddenNames" type="hidden" readonly="readonly" value="<%= sItemNames %>"/>
+	<input id="homeHiddenIds" type="hidden" readonly="readonly" value="<%= sItemIds %>"/>
+</div>

@@ -1,0 +1,38 @@
+{
+  "name": "waracle-demo",
+  "version": "0.0.0",
+  "description": "WaracleDemo",
+  "private": true,
+  "author": {
+    "name": "Andy"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@types/node": "^6.0.87",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "ejs": "^3.0.1",
+    "ejs-cli": "^2.1.1",
+    "express": "^4.17.1",
+    "image-to-base64": "^2.0.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.4.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open --hot --mode development",
+    "build": "webpack --mode production"
+  }
+}

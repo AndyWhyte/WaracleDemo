@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<title>Cake-alicious!</title>
+	<meta name="description" content="">
+	<meta http-equiv="content-security-policy" content="default-src * 'self' data: 'unsafe-inline'; img-src * 'self' data:">
+	<link rel="stylesheet" href="SS1.css" />
+	<link rel="stylesheet" href="jquery-ui.css" />
+
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+	<script type="text/javascript" src="sw.js"></script>
+	<script type="text/javascript" src="Page1.js"></script>
+	<!--<script type="text/javascript" src="demo.js"></script>-->
+
+	<link rel="manifest" href="manifest.json" />
+</head>
+<body onload="InitBody(document, <%= imageWidth %>, <%= imageHeight %>, <%= numItems %>, 0, <%= JSON.stringify(sItemNames) %>, <%= JSON.stringify(sItemIds) %>)">
+<input class="cakealicious" type="text" readonly="readonly" value="Cake-alicious!"/>
+<div id="dialog"><div id="dialogText"></div></div>
+<div>
+	<div id="homePage" class="homePage">
+		<div id="homeCentre" class="centre">
+			<div id="homeWrapper" class="homeWrapper">
+				<ul id="homeCarousel_ul" class="homeCarousel_ul">
+					<% for(let i=0; i < numItems; i++) { %>
+						<li class="homeCarousel_li"><img class="carousel_img" src="data:image/jpeg;charset=utf-8;base64,<%= aItemImages[i] %>" width="<%= imageWidth %>" height="<%= imageHeight %>" /></li>
+					<% } %>
+				</ul>
+			</div>
+			<button id="homeButtonL" class="homeButtonLR" type="button" onclick="ScrollLeft(document, <%= imageWidth %>, <%= numItems %>)"> < </button>
+			<button id="homeButtonR" class="homeButtonLR" type="button" onclick="ScrollRight(document, <%= imageWidth %>, <%= numItems %>)"> > </button>
+			<input id="homeMofN" class="homeMofN" type="text" readonly="readonly" value="1 / <%= numItems %>"/>
+			<div id="homeSemitransL" class="semitrans"></div>
+			<div id="homeSemitransR" class="semitrans"></div>
+			<input id="homeCakeName" class="homeCakeName" type="text" readonly="readonly" value=""/>
+			<button id="homeSubmitButton" class="homeSubmitButton" type="button" onclick="Submit(document)">Add</button>
+			<button id="homeViewButton" class="homeViewButton" type="button" onclick="View(document)">View</button>
+			<button id="homeDeleteButton" class="homeDeleteButton" type="button" onclick="DeleteItem(document)">Delete</button>
+			<input id="homeHiddenNumItems" type="hidden" readonly="readonly" value="<%= numItems %>"/>
+			<input id="homeHiddenNames" type="hidden" readonly="readonly" value="<%= sItemNames %>"/>
+			<input id="homeHiddenIds" type="hidden" readonly="readonly" value="<%= sItemIds %>"/>
+		</div>
+	</div>
+	<div id="submitPage" class="submitPage">
+		<div id="submitCentre" class="centre">
+			<form id="submitForm" class="submitForm" method="post" onsubmit="return(false);" enctype="multipart/form-data">
+				<input id="submitCakeNameLabel" class="submitCakeNameLabel" type="text" readonly="readonly" value="Name"/>
+				<input id="submitCakeName" class="submitCakeName" type="text" maxlength="18"/>
+				<input id="submitSelectImageLabel" class="submitSelectImageLabel" type="text" readonly="readonly" value="Select Image"/>
+				<input id="submitSelectImage" class="submitSelectImage" type="file" name="image" accept=".jpg,.jpeg"/>
+				<input id="submitCakeCommentLabel" class="submitCakeCommentLabel" type="text" readonly="readonly" value="Comment"/>
+				<textarea id="submitCakeComment" class="submitCakeComment" maxlength="180"></textarea>
+				<input id="submitYumFactorLabel" class="submitYumFactorLabel" type="text" readonly="readonly" value="Yum Factor! (1-5)"/>
+				<input id="submitYumFactor" class="submitYumFactor" type="number" max="5" min="1" value="3"/>
+				<button id="submitCakeButton" class="submitCakeButton" type="button" onclick="SubmitCake(this.form, document)">Submit</button>
+				<input id="submitStatusLabel" class="submitStatusLabel" type="text" readonly="readonly" value="Status"/>
+				<input id="submitStatus" class="submitStatus" type="text" readonly="readonly"/>
+			</form>
+			<button id="submitBackButton" class="submitBackButton" type="button" onclick="SubmitBack(document)">Done</button>
+		</div>
+	</div>
+	<div id="viewPage" class="viewPage">
+		<div id="viewCentre" class="centre">
+			<div id="viewWrapper" class="viewWrapper">
+				<input id="viewCakeNameLabel" class="viewCakeNameLabel" type="text" readonly="readonly" value="Name:"/>
+				<input id="viewCakeName" class="viewCakeName" type="text" readonly="readonly"/>
+				<input id="viewCakeCommentLabel" class="viewCakeCommentLabel" type="text" readonly="readonly" value="Comment:"/>
+				<textarea id="viewCakeComment" class="viewCakeComment" readonly="readonly"></textarea>
+				<input id="viewYumFactorLabel" class="viewYumFactorLabel" type="text" readonly="readonly" value="Yum Factor:"/>
+				<input id="viewYumFactor" class="viewYumFactor" type="text" readonly="readonly"/>
+				<img id="viewCakeImage" class="viewCakeImage" src=""
+			</div>
+			<button id="viewBackButton" class="viewBackButton" type="button" onclick="ViewBack(document)">Back</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

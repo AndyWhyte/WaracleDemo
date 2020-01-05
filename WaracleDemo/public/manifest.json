@@ -1,0 +1,15 @@
+{
+	"name": "Waracle Demo App",
+	"short_name": "Demo App",
+	"description": "Andy Whyte's demo app for the Waracle Full Stack Challenge.",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#ffffff",
+	"start_url": ".",
+	"orientation": "landscape",
+	"icons": [{
+		"src": "images/logo.png",
+		"sizes": "144x144",
+		"type": "image/png"
+	}]
+}

@@ -1,0 +1,373 @@
+﻿body
+{
+}
+
+.centre
+{
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	top:100px;
+	left:100px;
+}
+
+.homeWrapper
+{
+	margin:0px;
+	padding:0px;
+	border:inset;
+	overflow:hidden;
+	position:absolute;
+}
+
+.homeCarousel_ul
+{
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.homeCarousel_li
+{
+	display:inline;
+	float:left;	/* Without this there is a gap between images */
+	margin:0px;
+	padding:0px;
+}
+
+.carousel_img
+{
+	margin:0px;
+	padding:0px;
+}
+
+.homeButtonLR
+{
+	margin:0px;
+	padding:0px;
+	width:25px;
+	height:22px;
+	position:absolute;
+}
+
+.semitrans
+{
+	margin:0px;
+	padding:0px;
+	opacity:0.75;
+	background-color:black;
+	z-index:1;
+	position:absolute;
+}
+
+.homeMofN
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:50px;
+	height:22px;
+	position:absolute;
+}
+
+.homeCakeName
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	height:22px;
+	text-align:center;
+	position:absolute;
+	/*background-color:lightgray;*/
+}
+
+.homeSubmitButton
+{
+	margin:0px;
+	padding:0px;
+	width:75px;
+	height:22px;
+	position:absolute;
+}
+
+.homeViewButton
+{
+	margin:0px;
+	padding:0px;
+	width:75px;
+	height:22px;
+	position:absolute;
+}
+
+.homeDeleteButton
+{
+	margin:0px;
+	padding:0px;
+	width:75px;
+	height:22px;
+	position:absolute;
+}
+
+.homePage
+{
+	margin:0px;
+	padding:0px;
+	width:100vw;
+	height:100vh;
+	/*background-color:red;*/
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+.submitPage
+{
+	margin:0px;
+	padding:0px;
+	width:100vw;
+	height:100vh;
+	/*background-color:green;*/
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+.submitBackButton
+{
+	margin:0px;
+	padding:0px;
+	width:75px;
+	height:22px;
+	position:absolute;
+}
+
+.viewPage
+{
+	margin:0px;
+	padding:0px;
+	width:100vw;
+	height:100vh;
+	/*background-color:blue;*/
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+.viewBackButton
+{
+	margin:0px;
+	padding:0px;
+	width:75px;
+	height:22px;
+	position:absolute;
+}
+
+.submitSelectImageLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:100px;
+	height:22px;
+	text-align:center;
+	position:absolute;
+}
+
+.submitSelectImage
+{
+	margin:0px;
+	padding:0px;
+	border:solid;
+	width:400px;
+	height:22px;
+	position:absolute;
+	background-color:lightgray;
+}
+
+.submitCakeNameLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:100px;
+	height:22px;
+	text-align:center;
+	position:absolute;
+}
+
+.submitCakeName
+{
+	margin:0px;
+	padding:0px;
+	border:solid;
+	width:220px;
+	height:22px;
+	position:absolute;
+}
+
+.submitCakeCommentLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:100px;
+	height:22px;
+	text-align:center;
+	position:absolute;
+}
+
+.submitCakeComment
+{
+	margin:0px;
+	padding:0px;
+	border:solid;
+	width:400px;
+	height:60px;
+	position:absolute;
+	overflow:hidden;
+	resize:none;
+}
+
+.submitYumFactorLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:105px;
+	height:22px;
+	text-align:center;
+	position:absolute;
+}
+
+.submitYumFactor
+{
+	margin:0px;
+	padding:0px;
+	border:solid;
+	width:30px;
+	height:22px;
+	text-align:center;
+	position:absolute;
+}
+
+.submitStatusLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:100px;
+	height:22px;
+	text-align:center;
+	position:absolute;
+}
+
+.submitStatus
+{
+	margin:0px;
+	padding:0px;
+	border:solid;
+	width:400px;
+	height:22px;
+	position:absolute;
+}
+
+.submitCakeButton
+{
+	margin:0px;
+	padding:0px;
+	width:75px;
+	height:24px;
+	position:absolute;
+}
+
+.cakealicious
+{
+	left:100px;
+	top:50px;
+	border:none;
+	font-size:30px; 
+	text-align:center;
+	width:660px;
+	position:absolute;
+}
+
+.viewCakeNameLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:100px;
+	height:22px;
+	text-align:right;
+	position:absolute;
+}
+
+.viewCakeName
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:220px;
+	height:22px;
+	position:absolute;
+	background-color:red;
+}
+
+.viewYumFactorLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:105px;
+	height:22px;
+	text-align:right;
+	position:absolute;
+}
+
+.viewYumFactor
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:25px;
+	height:22px;
+	text-align:center;
+	position:absolute;
+	background-color:red;
+}
+
+.viewCakeImage
+{
+	margin:0px;
+	padding:0px;
+	/*border:none;*/
+	width:264px;
+	height:180px;
+	position:absolute;
+}
+
+.viewCakeCommentLabel
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:100px;
+	height:22px;
+	text-align:right;
+	position:absolute;
+}
+
+.viewCakeComment
+{
+	margin:0px;
+	padding:0px;
+	border:none;
+	width:125px;
+	height:178px;
+	position:absolute;
+	overflow:hidden;
+	resize:none;
+	background-color:red;
+}
