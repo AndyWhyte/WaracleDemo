@@ -1,0 +1,14 @@
+.vs/WaracleDemo/v15/.suo
+WaracleDemo/*.js
+WaracleDemo/*.map
+WaracleDemo/bin/*
+WaracleDemo/obj/*
+WaracleDemo/node_modules/*
+WaracleDemo/script/*.js
+WaracleDemo/script/*.map
+WaracleDemo/public/dist/*.js
+WaracleDemo/public/images/*.jpg
+
+
+
+
