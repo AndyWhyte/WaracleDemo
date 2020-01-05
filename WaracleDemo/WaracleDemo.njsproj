@@ -36,6 +36,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="b.bat" />
     <Content Include="public\css\SS1.css" />
     <Content Include="public\favicon.ico" />
     <Content Include="public\html\AjaxPartialHomePageRes.html" />
