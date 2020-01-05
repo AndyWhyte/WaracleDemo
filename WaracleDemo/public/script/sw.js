@@ -27,7 +27,7 @@ const aResources =
 ];
 
 //--------------------------------------
-//*
+
 self.addEventListener("install", async event =>
 {
 	console.log("install event");
@@ -77,7 +77,7 @@ self.addEventListener("fetch", async event =>
 		event.respondWith(tryCache(req));
 	}
 });
-//*/
+
 //--------------------------------------
 
 async function tryNetwork(req)

@@ -152,16 +152,16 @@ function InitViewDiv(doc, imageWidth, imageHeight)
 	el.style.top = 195 + "px";
 
 	el = doc.getElementById("viewYumFactorLabel");
-	el.style.left = ((imageWidth / 4) + 440) + "px";
+	el.style.left = ((imageWidth / 4) + 425) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewYumFactor");
-	el.style.left = ((imageWidth / 4) + 425) + "px";
-	el.style.top = 20 + "px";
+	el.style.left = ((imageWidth / 4) + 440) + "px";
+	el.style.top = 25 + "px";
 
 	el = doc.getElementById("viewCakeCommentLabel");
 	el.style.left = ((imageWidth / 4) + 20) + "px";
-	el.style.top = 5 + "px";
+	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewCakeComment");
 	el.style.left = ((imageWidth / 4) + 20) + "px";
@@ -453,7 +453,7 @@ function UpdateScroll(doc, numItems)
 }
 
 //--------------------------------------
-//*
+
 async function registerSW()
 { 
 	if ("serviceWorker" in navigator)
@@ -480,7 +480,7 @@ window.addEventListener("load", e =>
 {
 	//registerSW(); 
 });
-//*/
+
 //--------------------------------------
 }
 //--------------------------------------
