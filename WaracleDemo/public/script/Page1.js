@@ -147,33 +147,29 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 
 function InitViewDiv(doc, imageWidth, imageHeight)
 {
-	let el = doc.getElementById("viewCakeNameLabel");
-	el.style.left = ((imageWidth / 4) - 5) + "px";
-	el.style.top = 0 + "px";
-
-	el = doc.getElementById("viewCakeName");
-	el.style.left = ((imageWidth / 4) + 105) + "px";
+	let el = doc.getElementById("viewCakeName");
+	el.style.left = ((imageWidth / 4) + 170) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewYumFactorLabel");
-	el.style.left = ((imageWidth / 4) + 375) + "px";
+	el.style.left = ((imageWidth / 4) + 440) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewYumFactor");
-	el.style.left = ((imageWidth / 4) + 480) + "px";
-	el.style.top = 0 + "px";
+	el.style.left = ((imageWidth / 4) + 425) + "px";
+	el.style.top = 20 + "px";
 
 	el = doc.getElementById("viewCakeCommentLabel");
-	el.style.left = ((imageWidth / 4) - 5) + "px";
-	el.style.top = 30 + "px";
+	el.style.left = ((imageWidth / 4) + 20) + "px";
+	el.style.top = 5 + "px";
 
 	el = doc.getElementById("viewCakeComment");
-	el.style.left = ((imageWidth / 4) + 105) + "px";
-	el.style.top = 35 + "px";
+	el.style.left = ((imageWidth / 4) + 20) + "px";
+	el.style.top = 40 + "px";
 
 	el = doc.getElementById("viewCakeImage");
-	el.style.left = ((imageWidth / 4) + 240) + "px";
-	el.style.top = 30 + "px";
+	el.style.left = ((imageWidth / 4) + 145) + "px";
+	el.style.top = 33 + "px";
 
 	el = doc.getElementById("viewBackButton");
 	el.style.left = (((imageWidth * 3) / 2) - 35) + "px";

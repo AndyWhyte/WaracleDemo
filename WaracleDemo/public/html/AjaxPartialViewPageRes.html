@@ -1,10 +1,9 @@
 ﻿<div id="viewCentre" class="centre">
 	<div id="viewWrapper" class="viewWrapper">
-		<input id="viewCakeNameLabel" class="viewCakeNameLabel" type="text" readonly="readonly" value="Name:"/>
 		<input id="viewCakeName" class="viewCakeName" type="text" readonly="readonly" value="<%= itemInfo.name %>"/>
 		<input id="viewCakeCommentLabel" class="viewCakeCommentLabel" type="text" readonly="readonly" value="Comment:"/>
 		<textarea id="viewCakeComment" class="viewCakeComment" readonly="readonly"><%= itemInfo.comment %></textarea>
-		<input id="viewYumFactorLabel" class="viewYumFactorLabel" type="text" readonly="readonly" value="Yum Factor:"/>
+		<input id="viewYumFactorLabel" class="viewYumFactorLabel" type="text" readonly="readonly" value="Yum Factor (1-5):"/>
 		<input id="viewYumFactor" class="viewYumFactor" type="text" readonly="readonly" value="<%= itemInfo.yum %>"/>
 		<img id="viewCakeImage" class="viewCakeImage" src="data:image/jpeg;charset=utf-8;base64,<%= itemInfo.image %>" width="<%= imageWidth %>" height="<%= imageHeight %>"
 	</div>

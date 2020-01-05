@@ -293,17 +293,6 @@
 	position:absolute;
 }
 
-.viewCakeNameLabel
-{
-	margin:0px;
-	padding:0px;
-	border:none;
-	width:100px;
-	height:22px;
-	text-align:right;
-	position:absolute;
-}
-
 .viewCakeName
 {
 	margin:0px;
@@ -312,7 +301,8 @@
 	width:220px;
 	height:22px;
 	position:absolute;
-	background-color:red;
+	text-align:center;
+	/*background-color:red;*/
 }
 
 .viewYumFactorLabel
@@ -322,7 +312,7 @@
 	border:none;
 	width:105px;
 	height:22px;
-	text-align:right;
+	text-align:left;
 	position:absolute;
 }
 
@@ -331,11 +321,12 @@
 	margin:0px;
 	padding:0px;
 	border:none;
-	width:25px;
-	height:22px;
-	text-align:center;
+	width:125px;
+	height:160px;
+	text-align:left;
 	position:absolute;
-	background-color:red;
+	/*background-color:red;*/
+	font-size:180px;
 }
 
 .viewCakeImage
@@ -355,7 +346,7 @@
 	border:none;
 	width:100px;
 	height:22px;
-	text-align:right;
+	text-align:left;
 	position:absolute;
 }
 
@@ -369,5 +360,5 @@
 	position:absolute;
 	overflow:hidden;
 	resize:none;
-	background-color:red;
+	/*background-color:red;*/
 }
