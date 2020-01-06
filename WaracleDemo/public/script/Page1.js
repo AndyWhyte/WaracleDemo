@@ -10,7 +10,7 @@ const IMAGE_FILE_SIZE_LIMIT = 60000;	// bytes
 //--------------------------------------
 
 let gCurrIndex = 0;
-var gaNames;
+let gaNames;
 let gaIds;
 
 let gbHaveSubmitted = false;
@@ -24,7 +24,7 @@ let gScrollTimer = null;
 
 //--------------------------------------
 // Set up body. Intention was to have the page auto resizing if IMAGE_WIDTH or IMAGE_HEIGHT change.
-// This idea ran into problems when partially reloading the home page div, so some vars are duplicated above...
+// This idea ran into problems when partially reloading the home page div, so some consts are duplicated above...
 // Also, I suspect there may be a better way to achieve auto resizing with css these days.
 	
 function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sIds)
