@@ -484,7 +484,7 @@ async function registerSW()
 
 window.addEventListener("load", e =>
 {
-	//registerSW(); 
+	registerSW(); 
 });
 
 //--------------------------------------
