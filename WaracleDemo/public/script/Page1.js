@@ -15,7 +15,7 @@ let gaIds;
 
 let gbHaveSubmitted = false;
 
-const SCROLL_PERIOD_MS = 20;
+const SCROLL_PERIOD_MS = 15;
 
 let gbScrollDone = true;
 let gScrollTarget = 0;
@@ -142,6 +142,10 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 	el.style.left = ((imageWidth / 2) + 110) + "px";
 	el.style.top = (195 - borderHeight) + "px";
 
+	el = doc.getElementById("submitCakeAndCloseButton");
+	el.style.left = ((imageWidth / 2) + 195) + "px";
+	el.style.top = (195 - borderHeight) + "px";
+
 	InitViewDiv(doc, imageWidth, imageHeight);
 }
 
@@ -160,11 +164,11 @@ function InitViewDiv(doc, imageWidth, imageHeight)
 	el.style.top = 25 + "px";
 
 	el = doc.getElementById("viewCakeCommentLabel");
-	el.style.left = ((imageWidth / 4) + 20) + "px";
+	el.style.left = ((imageWidth / 4) + 15) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewCakeComment");
-	el.style.left = ((imageWidth / 4) + 20) + "px";
+	el.style.left = ((imageWidth / 4) + 15) + "px";
 	el.style.top = 40 + "px";
 
 	el = doc.getElementById("viewCakeImage");
@@ -246,7 +250,7 @@ function SubmitBack(doc)
 //--------------------------------------
 // Uses JQuery Ajax with FormData to submit a new cake
 
-function SubmitCake(form, doc)
+function SubmitCake(form, doc, close)
 {
 	let aElements = form.elements;
 	if (aElements["submitCakeName"].value === "")
@@ -296,6 +300,11 @@ function SubmitCake(form, doc)
 				console.log("SubmitCake error");
 				doc.getElementById("submitStatus").value = "SubmitCake error";
 			}
+			if (close)
+			{
+				setTimeout(SubmitBack, 100, doc);
+			}
+			console.log(myXhr);
 			return (myXhr);
 		}
 	});

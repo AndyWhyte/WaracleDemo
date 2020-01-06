@@ -15,8 +15,9 @@
 	<script type="text/javascript" src="utils.js"></script>
 	<script type="text/javascript" src="sw.js"></script>
 	<script type="text/javascript" src="Page1.js"></script>
-	<!--<script type="text/javascript" src="demo.js"></script>-->
-
+<!--
+	<script type="text/javascript" src="demo.js"></script>
+-->
 	<link rel="manifest" href="manifest.json" />
 </head>
 <body onload="InitBody(document, <%= imageWidth %>, <%= imageHeight %>, <%= numItems %>, 0, <%= JSON.stringify(sItemNames) %>, <%= JSON.stringify(sItemIds) %>)">
@@ -57,11 +58,12 @@
 				<textarea id="submitCakeComment" class="submitCakeComment" maxlength="180"></textarea>
 				<input id="submitYumFactorLabel" class="submitYumFactorLabel" type="text" readonly="readonly" value="Yum Factor! (1-5)"/>
 				<input id="submitYumFactor" class="submitYumFactor" type="number" max="5" min="1" value="3"/>
-				<button id="submitCakeButton" class="submitCakeButton" type="button" onclick="SubmitCake(this.form, document)">Submit</button>
+				<button id="submitCakeButton" class="submitCakeButton" type="button" onclick="SubmitCake(this.form, document, false)">Submit</button>
+				<button id="submitCakeAndCloseButton" class="submitCakeAndCloseButton" type="button" onclick="SubmitCake(this.form, document, true)">Submit & Close</button>
 				<input id="submitStatusLabel" class="submitStatusLabel" type="text" readonly="readonly" value="Status"/>
 				<input id="submitStatus" class="submitStatus" type="text" readonly="readonly"/>
 			</form>
-			<button id="submitBackButton" class="submitBackButton" type="button" onclick="SubmitBack(document)">Done</button>
+			<button id="submitBackButton" class="submitBackButton" type="button" onclick="SubmitBack(document)">Close</button>
 		</div>
 	</div>
 	<div id="viewPage" class="viewPage">

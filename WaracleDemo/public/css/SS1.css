@@ -282,6 +282,15 @@
 	position:absolute;
 }
 
+.submitCakeAndCloseButton
+{
+	margin:0px;
+	padding:0px;
+	width:115px;
+	height:24px;
+	position:absolute;
+}
+
 .cakealicious
 {
 	left:100px;
