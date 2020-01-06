@@ -91,17 +91,15 @@ function getHomePageParams(params, aItems)
 {
 	if (aItems.length == 0)
 	{
-		//aItems.push({name: "dummy data", image: "dummy data", _id: "0"});
+		aItems.push({name: "dummy name", image: "dummy image", _id: "dummyidchars"});
 	}
 
 	let sItemNames = "";
 	let sItemIds = "";
-
 	for (let i=0; i < aItems.length; i++)
 	{
-		//sItemNames += aItems[i].name.replace(/"/g, '\'') + "&";
-		sItemNames += aItems[i].name + "&";
-		sItemIds += aItems[i]._id + "&";
+		sItemNames += aItems[i].name.replace(/\t/g, "    ") + "\t";
+		sItemIds += aItems[i]._id + "\t";
 	}
 	sItemNames = sItemNames.substring(0, sItemNames.length - 1);
 	sItemIds = sItemIds.substring(0, sItemIds.length - 1);
@@ -195,6 +193,10 @@ function renderViewPageDiv(aData)
 		let params = aData[1];
 		let item = aData[2];
 
+		if (!item)
+		{
+			item = {name: "dummy name", image: "dummy image", comment: "dummy comment", yum: "0"};
+		}
 		params.itemInfo = {name: item.name, image: item.image, comment: item.comment, yum: item.yum};
 
 		res.render("AjaxPartialViewPageRes.html", params, function(err, data)
@@ -427,26 +429,6 @@ app.delete("/deleteItem", function(req, res)
 app.listen(PORT, function()
 {
 	console.log("Listening on port " + PORT);
-/*
-	let kvp =
-	{
-		name:"1",
-		image:"",
-		comment:"",
-		yum:"",
-	}
-	helper.insertItemWithImage(sCAKES_COLLECTION, kvp, "C:/Projects/WebApp/Node/WaracleDemo/WaracleDemo/public/images/motogp1.jpg");
-*/
-	//db.insertItem(cakesCollection, cakeItem);
-	//db.updateItem(cakesCollection, 2, cakeItem);
-	//db.readItem(cakesCollection, 2);
-	//db.readAllItems(cakesCollection, null);
-
-	//db.deleteItem(cakesCollection, 5);
-	//db.deleteItem(cakesCollection, 4);
-	//db.deleteItem(cakesCollection, 3);
-	//db.deleteItem(cakesCollection, 2);
-	//db.deleteItem(cakesCollection, 1);
 });
 
 //--------------------------------------

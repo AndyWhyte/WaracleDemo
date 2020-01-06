@@ -27,7 +27,7 @@ function getElements(sElements)
 	let aElements = [];
 	try
 	{
-		let asElements = sElements.split("&");
+		let asElements = sElements.split("\t");
 		for (let i=0; i < asElements.length; i++)
 		{
 			aElements.push(asElements[i]);
