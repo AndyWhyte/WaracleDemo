@@ -315,8 +315,6 @@ function SubmitCake(form, doc, close)
 
 function View(doc)
 {
-	doc.getElementById("homePage").style.visibility = "hidden";
-
 	$.ajax(
 	{
 		type:"GET",
@@ -330,6 +328,7 @@ function View(doc)
 
 			InitViewDiv(doc, IMAGE_WIDTH, IMAGE_HEIGHT);
 			el.style.visibility = "visible";
+			doc.getElementById("homePage").style.visibility = "hidden";
 
 			console.log("View success");
 		},
@@ -484,7 +483,7 @@ async function registerSW()
 
 window.addEventListener("load", e =>
 {
-	registerSW(); 
+	//registerSW(); 
 });
 
 //--------------------------------------
