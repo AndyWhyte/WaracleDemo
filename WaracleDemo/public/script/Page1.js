@@ -63,16 +63,18 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 	el.style.top = (imageHeight + 10) + "px";
 	el.value = gaNames[currIndex];
 
+	let xOff = ((imageWidth * 3) / 2);
+
 	el = doc.getElementById("homeButtonL");
-	el.style.left = (((imageWidth * 3) / 2) - 25) + "px";
+	el.style.left = (xOff - 25) + "px";
 	el.style.top = (imageHeight + 45) + "px";
 
 	el = doc.getElementById("homeButtonR");
-	el.style.left = (((imageWidth * 3) / 2) + 5) + "px";
+	el.style.left = (xOff + 5) + "px";
 	el.style.top = (imageHeight + 45) + "px";
 
 	el = doc.getElementById("homeMofN");
-	el.style.left = (((imageWidth * 3) / 2) + 42) + "px";
+	el.style.left = (xOff + 42) + "px";
 	el.style.top = (imageHeight + 45) + "px";
 	el.value = "(" + (gCurrIndex + 1) + " / " + numItems + ")";
 
@@ -85,7 +87,7 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 	el.style.top = (imageHeight + 75) + "px";
 
 	el = doc.getElementById("homeViewButton");
-	el.style.left = (((imageWidth * 3) / 2) - 35) + "px";
+	el.style.left = (xOff - 35) + "px";
 	el.style.top = (imageHeight + 75) + "px";
 
 	el = doc.getElementById("homeDeleteButton");
@@ -98,52 +100,54 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 	el = doc.getElementById("viewPage");
 	el.style.visibility = "hidden";
 
+	xOff = (imageWidth / 2);
+
 	el = doc.getElementById("submitCakeNameLabel");
-	el.style.left = ((imageWidth / 2) - 10) + "px";
+	el.style.left = (xOff - 10) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("submitCakeName");
-	el.style.left = ((imageWidth / 2) + 110) + "px";
+	el.style.left = (xOff + 110) + "px";
 	el.style.top = (0 - borderHeight) + "px";
 
 	el = doc.getElementById("submitSelectImageLabel");
-	el.style.left = ((imageWidth / 2) - 10) + "px";
+	el.style.left = (xOff - 10) + "px";
 	el.style.top = 30 + "px";
 
 	el = doc.getElementById("submitSelectImage");
-	el.style.left = ((imageWidth / 2) + 110) + "px";
+	el.style.left = (xOff + 110) + "px";
 	el.style.top = (30 - borderHeight) + "px";
 
 	el = doc.getElementById("submitCakeCommentLabel");
-	el.style.left = ((imageWidth / 2) - 10) + "px";
+	el.style.left = (xOff - 10) + "px";
 	el.style.top = 60 + "px";
 
 	el = doc.getElementById("submitCakeComment");
-	el.style.left = ((imageWidth / 2) + 110) + "px";
+	el.style.left = (xOff + 110) + "px";
 	el.style.top = (60 - borderHeight) + "px";
 
 	el = doc.getElementById("submitYumFactorLabel");
-	el.style.left = ((imageWidth / 2) - 10) + "px";
+	el.style.left = (xOff - 10) + "px";
 	el.style.top = 128 + "px";
 
 	el = doc.getElementById("submitYumFactor");
-	el.style.left = ((imageWidth / 2) + 110) + "px";
+	el.style.left = (xOff + 110) + "px";
 	el.style.top = (128 - borderHeight) + "px";
 
 	el = doc.getElementById("submitStatusLabel");
-	el.style.left = ((imageWidth / 2) - 10) + "px";
+	el.style.left = (xOff - 10) + "px";
 	el.style.top = 158 + "px";
 
 	el = doc.getElementById("submitStatus");
-	el.style.left = ((imageWidth / 2) + 110) + "px";
+	el.style.left = (xOff + 110) + "px";
 	el.style.top = (158 - borderHeight) + "px";
 
 	el = doc.getElementById("submitCakeButton");
-	el.style.left = ((imageWidth / 2) + 110) + "px";
+	el.style.left = (xOff + 110) + "px";
 	el.style.top = (195 - borderHeight) + "px";
 
 	el = doc.getElementById("submitCakeAndCloseButton");
-	el.style.left = ((imageWidth / 2) + 195) + "px";
+	el.style.left = (xOff + 195) + "px";
 	el.style.top = (195 - borderHeight) + "px";
 
 	InitViewDiv(doc, imageWidth, imageHeight);
@@ -151,28 +155,30 @@ function InitBody(doc, imageWidth, imageHeight, numItems, currIndex, sNames, sId
 
 function InitViewDiv(doc, imageWidth, imageHeight)
 {
+	let xOff = (imageWidth / 4);
+
 	let el = doc.getElementById("viewCakeName");
-	el.style.left = ((imageWidth / 4) + 165) + "px";
+	el.style.left = (xOff + 165) + "px";
 	el.style.top = 195 + "px";
 
 	el = doc.getElementById("viewYumFactorLabel");
-	el.style.left = ((imageWidth / 4) + 425) + "px";
+	el.style.left = (xOff + 425) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewYumFactor");
-	el.style.left = ((imageWidth / 4) + 440) + "px";
+	el.style.left = (xOff + 440) + "px";
 	el.style.top = 25 + "px";
 
 	el = doc.getElementById("viewCakeCommentLabel");
-	el.style.left = ((imageWidth / 4) + 15) + "px";
+	el.style.left = (xOff + 15) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewCakeComment");
-	el.style.left = ((imageWidth / 4) + 15) + "px";
+	el.style.left = (xOff + 15) + "px";
 	el.style.top = 40 + "px";
 
 	el = doc.getElementById("viewCakeImage");
-	el.style.left = ((imageWidth / 4) + 140) + "px";
+	el.style.left = (xOff + 140) + "px";
 	el.style.top = 0 + "px";
 
 	el = doc.getElementById("viewBackButton");
@@ -483,7 +489,7 @@ async function registerSW()
 
 window.addEventListener("load", e =>
 {
-	//registerSW(); 
+	registerSW(); 
 });
 
 //--------------------------------------

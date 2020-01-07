@@ -54,7 +54,6 @@
     <TypeScriptCompile Include="server.ts" />
     <Content Include=".babelrc" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
