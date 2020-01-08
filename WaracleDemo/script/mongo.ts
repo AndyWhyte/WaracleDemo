@@ -1,8 +1,6 @@
 ﻿//--------------------------------------
-{	// Create block scope
-//--------------------------------------
 
-const utils = require("./utils");
+//const utils = require("./utils");	// Already required
 
 const DB_NAME = "WaracleDemo";
 const MONGO_URI = "mongodb+srv://Test:aMN5QBBUqDpabyGt@cluster0-if8i0.azure.mongodb.net/test?retryWrites=true&w=majority";
@@ -199,6 +197,4 @@ exports.insertItem = insertItem;
 exports.updateItem = updateItem;
 exports.deleteItem = deleteItem;
 
-//--------------------------------------
-}
 //--------------------------------------

@@ -1,9 +1,7 @@
 ﻿//--------------------------------------
-{	// Create block scope
-//--------------------------------------
 
 const image2base64 = require("image-to-base64");
-const db = require("./mongo");
+//const db = require("./mongo");	// already required
 
 //--------------------------------------
 
@@ -56,6 +54,4 @@ function updateItemWithImage(coll, id, kvp, sUrl)
 exports.insertItemWithImage = insertItemWithImage;
 exports.updateItemWithImage = updateItemWithImage;
 
-//--------------------------------------
-}
 //--------------------------------------

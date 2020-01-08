@@ -1,6 +1,4 @@
 ﻿//--------------------------------------
-{	// Create block scope
-//--------------------------------------
 // These must be kept the same as in server.ts until a better method is found to take the values from server.ts
 
 const IMAGE_WIDTH = 220;
@@ -492,6 +490,4 @@ window.addEventListener("load", e =>
 	registerSW(); 
 });
 
-//--------------------------------------
-}
 //--------------------------------------

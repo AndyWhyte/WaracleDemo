@@ -1,6 +1,4 @@
 ﻿//--------------------------------------
-{	// Create block scope
-//--------------------------------------
 
 function printObject(obj)
 {
@@ -96,6 +94,4 @@ exports.getItemKVP = getItemKVP;
 exports.params2KVP = params2KVP;
 exports.btoa = btoa;
 
-//--------------------------------------
-}
 //--------------------------------------
